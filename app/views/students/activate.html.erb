@@ -1,0 +1,8 @@
+<% if @student.active%>
+
+  <% @student.update(:active false)%>
+<% else %>
+  <% @student.update(:active true)%>
+<%end%>
+@student.save
+redirect_to show
